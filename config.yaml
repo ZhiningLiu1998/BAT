@@ -1,0 +1,25 @@
+general:
+  gpu_id: 0
+  seed: 42
+  n_runs: 5
+  debug: false
+
+dataset:
+  dataset: cora
+  imb_type: step
+  imb_ratio: 10
+
+architecture:
+  gnn_arch: GCN
+  n_layer: 3
+  hid_dim: 256
+
+training:
+  lr: 0.01
+  weight_decay: 5e-4
+  epochs: 2000
+  early_stop: 200
+  tqdm: false
+
+bat_parameters:
+  bat_mode: all
