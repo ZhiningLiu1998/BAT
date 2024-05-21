@@ -67,6 +67,7 @@ class NodeClassificationTrainer:
     """
 
     default_eval_metrics = {
+        "acc": (accuracy_score, {}),
         "bacc": (balanced_accuracy_score, {}),
         "macro-f1": (f1_score, {"average": "macro"}),
     }
@@ -487,12 +488,11 @@ class NodeClassificationTrainer:
                 raise ValueError('runtime must be either "latest" or "average"')
 
             if self.augmenter:
-                log += f"| upd/aug time: {runtime_info['update_time(ms)']:.2f}/{runtime_info['time_aug(ms)']:.2f}ms "
-                log += f"| node/edge ratio: {runtime_info['node_ratio(%)']:.2f}/{runtime_info['edge_ratio(%)']:.2f}% "
-                # log += f"| unc time: {runtime_info['time_unc(ms)']:.4f}ms "
-                # log += f"| sim time: {runtime_info['time_sim(ms)']:.4f}ms "
-            else:
-                log += f"| upd time: {runtime_info['update_time(ms)']:.2f}ms "
+                log += f"| aug time: {runtime_info['time_aug(ms)']:.2f}ms "
+                # log += f"| node/edge ratio: {runtime_info['node_ratio(%)']:.2f}/{runtime_info['edge_ratio(%)']:.2f}% "
+                # log += f"| upd/aug time: {runtime_info['update_time(ms)']:.2f}/{runtime_info['time_aug(ms)']:.2f}ms "s
+            # else:
+            #     log += f"| upd time: {runtime_info['update_time(ms)']:.2f}ms "
 
         # print the log string
         print(log)
