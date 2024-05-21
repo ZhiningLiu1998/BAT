@@ -169,16 +169,20 @@ class DummyAugmenter(BaseGraphAugmenter):
 
 class BatAugmenter(BaseGraphAugmenter):
     """
-    Topological Balanced augmEntation (BAT) for graph data.
+    Balanced Topological (BAT) augmentation for graph data.
 
     Parameters:
-    - mode: str, optional (default: "bat0")
+    - mode: str, optional (default: "bat1")
         The augmentation mode. Must be one of ["dummy", "bat0", "bat1"].
+        - 'dummy': no augmentation.
+        - 'bat0': BAT with 0th order posterior likelihood estimation, linear to #nodes.
+        - 'bat1': BAT with 1st order posterior likelihood estimation, linear to #edges
+           and generally performs better (recommended).
     - random_state: int or None, optional (default: None)
         Random seed for reproducibility.
 
     Methods:
-    - __init__(self, mode: str = "bat0", random_state: int = None)
+    - __init__(self, mode: str = "bat1", random_state: int = None)
         Initializes the BatAugmenter instance.
 
     - init_with_data(self, data: pyg.data.Data)
@@ -222,14 +226,14 @@ class BatAugmenter(BaseGraphAugmenter):
 
     def __init__(
         self,
-        mode: str = "bat0",
+        mode: str = "bat1",
         random_state: int = None,
     ):
         """
         Initializes the BatAugmenter instance.
 
         Parameters:
-        - mode: str, optional (default: "bat0")
+        - mode: str, optional (default: "bat1")
             The augmentation mode. Must be one of ["dummy", "bat0", "bat1"].
         - random_state: int or None, optional (default: None)
             Random seed for reproducibility.
