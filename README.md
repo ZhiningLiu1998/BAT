@@ -1,8 +1,5 @@
 ![](https://raw.githubusercontent.com/ZhiningLiu1998/figures/master/bat/header.png)
 
-<h1 align="center">
-BAT: Balanced Topological Augmentation
-</h1>
 <p align="center">
   <a href="https://github.com/ZhiningLiu1998/BAT">
     <img src="https://img.shields.io/badge/ICML-2024-orange">
