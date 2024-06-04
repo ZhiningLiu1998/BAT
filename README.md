@@ -3,6 +3,23 @@
 <h1 align="center">
 BAT: Balanced Topological Augmentation for Class-imbalanced Node Classification
 </h1>
+<p align="center">
+  <a href="https://github.com/ZhiningLiu1998/BAT">
+    <img src="https://img.shields.io/badge/ICML-2024-orange">
+  </a>
+  <a href="https://github.com/ZhiningLiu1998/BAT/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/ZhiningLiu1998/BAT">
+  </a>
+  <a href="https://github.com/ZhiningLiu1998/BAT/issues">
+    <img src="https://img.shields.io/github/issues/ZhiningLiu1998/BAT">
+  </a>
+  <a href="https://github.com/ZhiningLiu1998/BAT/stargazers">
+    <img src="https://img.shields.io/github/stars/ZhiningLiu1998/BAT">
+  </a>
+  <a href="https://github.com/ZhiningLiu1998/BAT/network/members">
+    <img src="https://img.shields.io/github/forks/ZhiningLiu1998/BAT">
+  </a>
+</p>
 
 <h3 align="center">
 "Class-Imbalanced Graph Learning without Class Rebalancing" [ICML'24]<br>
