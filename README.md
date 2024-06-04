@@ -1,7 +1,7 @@
 ![](https://raw.githubusercontent.com/ZhiningLiu1998/figures/master/bat/header.png)
 
 <h1 align="center">
-BAT: Balanced Topological Augmentation for Class-imbalanced Node Classification
+BAT: Balanced Topological Augmentation
 </h1>
 <p align="center">
   <a href="https://github.com/ZhiningLiu1998/BAT">
@@ -26,7 +26,7 @@ BAT: Balanced Topological Augmentation for Class-imbalanced Node Classification
 Links: [<a href="https://arxiv.org/abs/2308.14181">arXiv</a>] [<a href="https://arxiv.org/pdf/2308.14181">PDF</a>]
 </h3>
 
-**BAT** (BAlanced Topological augmentation) is a **lightweight, plug-and-play** augmentation technique for class-imbalanced node classification. It mitigates the **class-imbalance bias** introduced by ambivalent and distant message-passing on graph topology with pure topological manipulation. Being model-agnostic and orthogonal to class-balancing techniques (e.g., reweighting/resampling), **BAT** can be seamlessly integrated with existing imbalance-handling methods and GNN architectures. 
+**BAT** (BAlanced Topological augmentation) is a **lightweight, plug-and-play** augmentation technique for **class-imbalanced node classification**. It mitigates the **class-imbalance bias** introduced by ambivalent and distant message-passing on graph topology with pure topological manipulation. Being model-agnostic and orthogonal to class-balancing techniques (e.g., reweighting/resampling), **BAT** can be seamlessly integrated with existing imbalance-handling methods and GNN architectures. 
 
 ### **BAT Key Features:**
 
