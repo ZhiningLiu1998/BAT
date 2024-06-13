@@ -25,15 +25,15 @@ Links: [<a href="https://arxiv.org/abs/2308.14181">arXiv</a>] [<a href="https://
 
 **BAT** (BAlanced Topological augmentation) is a **lightweight, plug-and-play** augmentation technique for **class-imbalanced node classification**. It mitigates the **class-imbalance bias** introduced by ambivalent and distant message-passing on graph topology with pure topological manipulation. Being model-agnostic and orthogonal to class-balancing techniques (e.g., reweighting/resampling), **BAT** can be seamlessly integrated with existing imbalance-handling methods and GNN architectures. 
 
-### **BAT Key Features:**
+### 🌈 **BAT Key Features:**
 
-- &#x1F34E; **Scalability**: Linear complexity w.r.t. number of nodes/edges.
-- &#x1F34E; **Plug-and-play**: Directly integrates into the training loop with ~10 lines of code.
-- &#x1F34E; **Performance**: Up to 46.27% performance boosting and 72.74% predictive bias reduction.
-- &#x1F34E; **Versatility**: Work with various GNN backbones and imbalance-handling techniques.
-- &#x1F34E; **Ease-of-use**: Unified, concise, and extensible API design. No additional hyperparameter.
+- 📈 **Scalability**: Linear complexity w.r.t. number of nodes/edges.
+- 🔌 **Plug-and-play**: Directly integrates into the training loop with ~10 lines of code.
+- 🚀 **Performance**: Up to 46.27% performance boosting and 72.74% predictive bias reduction.
+- 🪐 **Versatility**: Work with various GNN backbones and imbalance-handling techniques.
+- 🧑‍💻 **Ease-of-use**: Unified, concise, and extensible API design. No additional hyperparameter.
 
-### **Intergrating [`BatAugmenter`](https://github.com/ZhiningLiu1998/BAT/blob/main/bat.py#L170) (BAT) into your training loop with <10 lines of code:**
+### ✂️ **Intergrate [`BatAugmenter`](https://github.com/ZhiningLiu1998/BAT/blob/main/bat.py#L170) (BAT) into your training loop with <10 lines of code:**
 ```python
 from bat import BatAugmenter
 
@@ -47,7 +47,8 @@ for epoch in range(epochs):
     model.update(x, y, edge_index, train_mask)
 ```
 
-### If you find our work useful, please consider citing our work:
+### 🤗 Citing BAT
+We appreciate your citation if you find our work helpful!🍻 BibTeX entry:
 ```bibtex
 @misc{liu2024classimbalanced,
       title={Class-Imbalanced Graph Learning without Class Rebalancing}, 
