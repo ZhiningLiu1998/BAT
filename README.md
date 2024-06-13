@@ -18,19 +18,24 @@
   </a>
 </p>
 
-<h3 align="center">
+<h2 align="center">
+BAT: BAlanced Topological augmentation
+</h2>
+<h4 align="center">
 "Class-Imbalanced Graph Learning without Class Rebalancing" [ICML'24]<br>
 Links: [<a href="https://arxiv.org/abs/2308.14181">arXiv</a>] [<a href="https://arxiv.org/pdf/2308.14181">PDF</a>]
-</h3>
+</h4>
 
-**BAT** (BAlanced Topological augmentation) is a **lightweight, plug-and-play** augmentation technique for **class-imbalanced node classification**. It mitigates the **class-imbalance bias** introduced by ambivalent and distant message-passing on graph topology with pure topological manipulation. Being model-agnostic and orthogonal to class-balancing techniques (e.g., reweighting/resampling), **BAT** can be seamlessly integrated with existing imbalance-handling methods and GNN architectures. 
+🦇 **BAT** (BAlanced Topological augmentation) is a **lightweight, plug-and-play** augmentation technique for **class-imbalanced node classification**. It mitigates the **class-imbalance bias** introduced by ambivalent and distant message-passing on graph topology with PURE topological manipulation. 
+
+Being model-agnostic and orthogonal to class-balancing techniques (e.g., reweighting/resampling), 🦇 **BAT** can be seamlessly integrated with various GNN architectures and BOOST regular class-balancing-based imbalance-handling methods.
 
 ### 🌈 **BAT Key Features:**
 
 - 📈 **Scalability**: Linear complexity w.r.t. number of nodes/edges.
 - 🔌 **Plug-and-play**: Directly integrates into the training loop with ~10 lines of code.
 - 🚀 **Performance**: Up to 46.27% performance boosting and 72.74% predictive bias reduction.
-- 🪐 **Versatility**: Work with various GNN backbones and imbalance-handling techniques.
+- 🪐 **Versatility**: Work with various GNN backbones ON TOP OF other imbalance-handling techniques.
 - 🧑‍💻 **Ease-of-use**: Unified, concise, and extensible API design. No additional hyperparameter.
 
 ### ✂️ **Intergrate [`BatAugmenter`](https://github.com/ZhiningLiu1998/BAT/blob/main/bat.py#L170) (BAT) into your training loop with <10 lines of code:**
@@ -73,8 +78,8 @@ We appreciate your citation if you find our work helpful!🍻 BibTeX entry:
     - [Methods](#methods-1)
 - [Emprical Results](#emprical-results)
   - [Experimental Setup](#experimental-setup)
-  - [On the effectiveness and versatility of BAT](#on-the-effectiveness-and-versatility-of-bat)
-  - [On the robustness of BAT](#on-the-robustness-of-bat)
+  - [BAT brings significant and universal performance BOOST](#bat-brings-significant-and-universal-performance-boost)
+  - [BAT is robust to extreme class-imbalance](#bat-is-robust-to-extreme-class-imbalance)
 - [References](#references)
 
 ## Usage Example
@@ -201,6 +206,7 @@ class BatAugmenter(BaseGraphAugmenter):
            and generally performs better (recommended).
     - random_state: int or None, optional (default: None)
         Random seed for reproducibility.
+    """
 ```
 
 #### Parameters
@@ -324,7 +330,7 @@ To fully validate **BAT**'s performance and compatibility with existing (graph) 
 
 For more details on the experimental setup, please refer to our paper: https://arxiv.org/abs/2308.14181.
 
-### On the effectiveness and versatility of BAT
+### BAT brings significant and universal performance BOOST
 
 We first report the detailed empirical results of applying **BAT** with 6 IGL baselines and 5 GNN backbones on 3 imbalanced graphs (Cora, CiteSeer, and PubMed) with IR=10 in Table 1. We highlight the improvement brought about by BAT to the average/best test performane of the 6 IGL baselines. 
 
@@ -332,8 +338,7 @@ Results show that **BAT brought significant and universal performance boost** to
 
 ![](https://raw.githubusercontent.com/ZhiningLiu1998/figures/master/bat/results.png)
 
-
-### On the robustness of BAT
+### BAT is robust to extreme class-imbalance
 
 We now test **BAT**'s robustness to varying types of extreme class-imbalance. In this experiment, we consider a more challenging scenario with IR = 20, as well as the natural (long-tail) class imbalance that is commonly observed in real-world graphs with IR of 50 and 100. Datasets from (*CS, Physics*) are also included to test **BAT**'s performance on large-scale tasks. Results show that **BAT** consistently demonstrates superior performance in boosting classification and reducing predictive bias.
 
