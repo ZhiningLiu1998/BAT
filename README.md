@@ -70,6 +70,7 @@ We appreciate your citation if you find our work helpful!🍻 BibTeX entry:
 - [Usage Example](#usage-example)
   - [Python Scripts](#python-scripts)
   - [Jupyter Notebook](#jupyter-notebook)
+  - [Combining BAT with other CIGL baselines](#combining-bat-with-other-cigl-baselines)
 - [API reference](#api-reference)
   - [class: `BatAugmenter`](#class-bataugmenter)
     - [Parameters](#parameters)
@@ -183,6 +184,13 @@ We also provide an example jupyter notebook [train_example.ipynb](https://github
 - 4 Imbalance type-rate combinations: 
   - 'step': [10, 20]
   - 'natural': [50, 100]
+
+### Combining BAT with other CIGL baselines
+
+We developed the experiment code that combine BAT and CIGL techniques based on the official implementation of [GraphENS](https://github.com/JoonHyung-Park/GraphENS) and [GraphSMOTE](https://github.com/TianxiangZhao/GraphSmote). The code is available in the `dev` folder, and the main script is [`experiment_example.ipynb`](https://github.com/ZhiningLiu1998/BAT/blob/main/dev/experiment_example.ipynb).
+
+Note: due to the tightly coupled implementation design of many baselines, it would take much effort to decouple them and integrate BAT with different baselines with a clean and concise API. There is much room for improvement in the code design. Please use the dev code as a reference to integrate BAT with other CIGL baselines, and all kinds of feedback are welcome.
+
 
 ## API reference
 
